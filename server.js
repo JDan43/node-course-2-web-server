@@ -21,9 +21,9 @@ app.use((request, response, next) => {
   next();
 });
 
-app.use((request, response) => {
-  response.render('maintenance.hbs');
-})
+// app.use((request, response, next) => { // will block out other url's
+//   response.render('maintenance.hbs');
+// })
 
 app.use(express.static(__dirname + '/public'));   // middleware
 
