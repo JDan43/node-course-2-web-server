@@ -59,6 +59,14 @@ app.get('/about', (request, response) => {
   });
 });
 
+app.get('/project', (request, response) => {
+  //response.send('Project Page');
+  response.render('project.hbs', {
+    pageTitle: 'Project Page',
+  });
+});
+
+
 app.get('/bad', (request, response) => {
   response.send({
     errorMessage: 'Bad Error'
